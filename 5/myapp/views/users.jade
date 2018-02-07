@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  #wrapper
+      // Page Content
+      #page-wrapper
+        .container-fluid
+          .row
+            .col-lg-12
+              h1.page-header=title
+          .row
+            .col-xs-12
+              table.table-striped.table
+                thead
+                  tr
+                    th Name
+                    th Email
+                    th Gender
+                    th Address
+                    th actions
+                tbody
+                  each row in users
+                    tr
+                      td=row.name
+                      td=row.email
+                      td=row.gender 
+                      td=row.address
+                      td 
+                        .btn-group
+                          a.btn.btn-primary(href='/users/'+row._id) show
+                          a.btn.btn-warning(href='/users/delete/'+row._id) delete
+                      
+                      
+                      
+                      
+                      

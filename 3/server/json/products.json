@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Borotva",
+        "price": 1222,
+        "qty": 22
+
+    },
+    {
+        "name": "Kés",
+        "price": 300,
+        "qty": 50
+
+    },
+    {
+        "name": "Borotva hab",
+        "price": 1500,
+        "qty": 102
+
+    }
+]

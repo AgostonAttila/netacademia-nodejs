@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  #wrapper
+      // Page Content
+      #page-wrapper
+        .container-fluid
+          .row
+            .col-lg-12
+              h1.page-header=title
+                a.btn.btn-primary.pull-right(href='/products/new') New
+          .row
+            .col-xs-12
+              table.table.table-striped
+                thead
+                  tr
+                    th Name
+                    th Price
+                    th Manufacturer
+                    th Image
+                    th In Stock
+                    th actions
+                tbody
+                  each row in products
+                    tr
+                      td=row.name
+                      td=row.price
+                      td=row.manufacturer 
+                      td
+                        img.product-list-image(src=row.image)
+                      td=row.instock
+                      td
+                        .btn-group
+                          a.btn.btn-primary(href='/products/'+row._id) show
+                          a.btn.btn-warning(href='/products/delete/'+row._id) delete
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
